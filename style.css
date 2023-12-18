@@ -1,0 +1,133 @@
+:root{
+    --main:white;
+    --sec:#2B9DF4;
+    --fsmain: 'Jura', sans-serif;
+    --fssec: 'Orbitron', sans-serif;
+
+}
+
+body{
+    color:var(--main);
+    background-color: black;
+    font-family: var(--fssec);
+}
+
+p{
+    font-family: var(--fsmain);
+}
+
+nav {
+    font-family: var(--fsmain);
+    background-color: rgba(0, 0, 0, 0.755);
+
+}
+        /* media query (mobile first) */
+@media screen and (min-width:670px) {
+    nav{
+        border-bottom: 2px solid rgba(255, 255, 255, 0.556)
+    }
+}
+
+
+/* header */
+
+header {
+    height: 90vh;
+    background:linear-gradient(to bottom right ,black,rgba(0, 0, 0, 0.513),black), url(/media/moon.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    
+
+}
+h1{
+    font-size:2.5rem;
+}
+@media screen and (max-width:670px) {
+    header{
+        background-position: 0vw 0vh,-15vw 0vh;
+        
+    }
+   
+}
+
+.freccetta {
+    color: var(--sec);
+    font-size: 3rem;
+    height:40vh;
+
+}
+
+.cardina {
+    text-align: center;
+    border-bottom:2px solid  var(--sec);
+    
+}
+.cardina p{
+    font-size:0.7em
+}
+
+/*sezione testo a sinistra e luna a destra */
+#moon2{
+    height: 90vh;
+}
+h4{
+    color: var(--sec);
+}
+
+/* sezione card centrali */
+.cardCentrali i{
+    color:var(--sec)
+}
+
+.cardCentrali p {
+    font-size: 0.8em;
+    border-top: 2px solid var(--sec)
+}
+
+/* sezione razzo */
+
+
+.spazioRazzo img{
+    height:115vh;
+    width:auto;
+    
+}
+
+/* target section */
+
+.targetCards p {
+    font-size: 0.9em;
+}
+
+
+/* i crediti per questo effetto vanno a https://css-tip.com/corner-only-border-image/ */
+.targetEffect  {
+--s: 10px; /* the size on the corner */
+--t: 3px;  /* the thickness of the border */
+--g: 8px; /* the gap between the border and image */
+
+padding: calc(var(--g) + var(--t));
+outline: var(--t) solid var(--sec); /* the color here */
+outline-offset: calc(-1*var(--t));
+-webkit-mask:
+conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+linear-gradient(#000 0 0) content-box;
+transition: 0.4s;
+}
+
+footer{
+    height:70vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.182),black),url(media/sunrise-1765027_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer .container {
+    height:100%;
+}
+
+.striscetta {
+    height: 3px;
+    background:linear-gradient(to right, transparent,#2B9DF4,transparent);
+}
